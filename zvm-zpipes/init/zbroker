@@ -51,7 +51,7 @@ do_start()
 	# on this one.  As a last resort, sleep for some time.
 
         sleep 1
-        chmod 666 /tmp/zbroker-local
+        chmod 666 /tmp/zpipes-local
 }
 
 #
