@@ -1,7 +1,7 @@
 # Repo config for zpipes
 https://github.com/zeromq/zeromq4-x v4.0.4
 https://github.com/hintjens/czmq master
-https://github.com/zeromq/zyre v1.0.0
+https://github.com/hintjens/zyre master
 https://github.com/zeromq/libzmtp master
 https://github.com/hintjens/zbroker master
 https://github.com/rpedde/zvm-zpipes master
