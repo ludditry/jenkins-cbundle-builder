@@ -29,7 +29,7 @@ if [ ! -z "${INTERFACE}" ]; then
     DAEMON_ARGS="ZSYS_INTERFACE=${INTERFACE} ${DAEMON} ${DAEMON_ARGS}"
 fi
 
-ulimit -Hn 32768
+ulimit -Sn 32768
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
