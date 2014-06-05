@@ -1,0 +1,9 @@
+# Repo config for zpipes
+https://github.com/zeromq/zeromq4-x v4.0.4
+https://github.com/zeromq/czmq 8af45802f233683ba6a833e7606eec0ccf6b93df
+https://github.com/zeromq/zyre 607bb34b1bd0b97cb0f8e0cc94b70d373b56f890
+https://github.com/zeromq/libzmtp 5cf4350e1a2bce213fbdee6db2f918c04d50ac9d
+https://github.com/zeromq/zbroker ef07b3d91178a7e2e88f464d66b9df919f998bcb
+https://github.com/rpedde/zvm-zpipes master
+https://github.com/zerovm/validator master
+https://github.com/rpedde/zerovm-2.0 makefile-changes

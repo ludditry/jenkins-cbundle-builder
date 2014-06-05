@@ -1,0 +1,4 @@
+# build zerovm-2.0 (non-autoconfed)
+
+make EXTRA_CFLAGS=-I${DESTDIR}/include EXTRA_LDFLAGS=-L${DESTDIR}/lib
+make PREFIX="" DESTDIR=${DESTDIR} install
