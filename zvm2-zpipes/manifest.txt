@@ -6,4 +6,4 @@ https://github.com/zeromq/libzmtp master
 https://github.com/zeromq/zbroker master
 https://github.com/rpedde/zvm-zpipes master
 https://github.com/zerovm/validator master
-https://github.com/zerovm/zerovm-2.0 devel
+https://github.com/rpedde/zerovm-2.0 opaque_socket
