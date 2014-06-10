@@ -3,7 +3,7 @@ https://github.com/zeromq/zeromq4-x master
 https://github.com/zeromq/czmq master
 https://github.com/zeromq/zyre master
 https://github.com/zeromq/libzmtp master
-https://github.com/rpedde/zbroker fix_log
+https://github.com/zeromq/zbroker master
 https://github.com/rpedde/zvm-zpipes master
 https://github.com/zerovm/validator master
 https://github.com/rpedde/zerovm-2.0 opaque_socket
