@@ -1,0 +1,7 @@
+# install glibc
+
+pushd build
+
+make DESTDIR=${DESTDIR} install
+
+popd

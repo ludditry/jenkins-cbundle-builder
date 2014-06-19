@@ -1,0 +1,3 @@
+# install gmp
+
+make DESTDIR=${DESTDIR} install

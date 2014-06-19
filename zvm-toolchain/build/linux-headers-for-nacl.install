@@ -1,0 +1,4 @@
+# install linux headers for nacl
+
+mkdir -p ${DESTDIR}/include
+cp -a include/* ${DESTDIR}/include

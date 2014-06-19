@@ -1,0 +1,3 @@
+# install ppl, the parma polyhedra library
+
+make DESTDIR=${DESTDIR} install

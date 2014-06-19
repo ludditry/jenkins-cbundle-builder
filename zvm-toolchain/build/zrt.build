@@ -1,0 +1,9 @@
+# build zrt
+
+INCLUDEDIR=${DESTDIR}/include
+
+install -m 0755 -d ${INCLUDEDIR}
+install -m 0755 -d ${INCLUDEDIR}/nvram
+
+install -m 0644 lib/zrt.h ${INCLUDEDIR}
+install -m 0644 lib/nvram/*.h ${INCLUDEDIR}/nvram

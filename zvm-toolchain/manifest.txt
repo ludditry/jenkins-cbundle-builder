@@ -1,0 +1,12 @@
+# Repo config for zerovm-toolchain
+git+https://github.com/zerovm/zrt master
+git+https://github.com/zerovm/binutils master
+http://ftp.gnu.org/gnu/gmp/gmp-5.0.2.tar.gz 5.0.2
+http://www.mpfr.org/mpfr-3.0.1/mpfr-3.0.1.tar.gz 3.0.1
+http://www.multiprecision.org/mpc/download/mpc-0.9.tar.gz 0.9
+http://bugseng.com/external/ppl/download/ftp/releases/0.11.2/ppl-0.11.2.tar.gz 0.11.2
+http://pkgs.fedoraproject.org/repo/pkgs/cloog/cloog-ppl-0.15.9.tar.gz/806e001d1b1a6b130069ff6274900af5/cloog-ppl-0.15.9.tar.gz 0.15.9
+git+https://github.com/zerovm/gcc master
+git+https://github.com/zerovm/linux-headers-for-nacl master
+#git+https://github.com/zerovm/zrt master
+git+https://github.com/zerovm/glibc master

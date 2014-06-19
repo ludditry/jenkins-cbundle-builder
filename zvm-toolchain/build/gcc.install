@@ -1,0 +1,6 @@
+# install us some gcc
+
+pushd build
+make DESTDIR=${DESTDIR} install-gcc
+make DESTDIR=${DESTDIR} install-target-libgcc
+popd

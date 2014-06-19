@@ -1,0 +1,5 @@
+# build binutils-x86_64-nacl
+
+CC="gcc -m32" CFLAGS="-O2 -g" LDFLAGS="-s" ./configure --prefix='' --target=x86_64-nacl --with-sysroot=${DESTDIR}/x86_64-nacl --disable-werror --enable-deterministic-archives --without-zlib
+
+make

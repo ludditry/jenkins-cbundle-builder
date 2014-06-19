@@ -1,0 +1,12 @@
+# build cloog-ppl, the chunky loop generator
+
+# for f in configure{.in,}; do
+#     sed -i ${f} -e s'#ppl_minor_version=10#ppl_minor_version=11#'
+# done
+
+sed -i configure -e s'#ppl_minor_version=10#ppl_minor_version=11#'
+sed -i Makefile.in -e s'#LIBS = @LIBS@#LIBS = @LIBS@ -lstdc++ -lm -lgmp -lpwl#'
+
+./configure CFLAGS="-m32 -I${DESTDIR}/include " CXXFLAGS="-m32 -I${DESTDIR/include} " CPPFLAGS="-fexceptions " --prefix="" --disable-shared --with-gmp=${DESTDIR} --with-ppl=${DESTDIR}
+
+make

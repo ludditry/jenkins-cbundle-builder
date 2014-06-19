@@ -1,0 +1,3 @@
+# install cloog-ppl, the chunky loop generator
+
+make DESTDIR=${DESTDIR} install

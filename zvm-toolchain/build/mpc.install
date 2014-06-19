@@ -1,0 +1,3 @@
+# install mpc, the multiprecision library
+
+make DESTDIR=${DESTDIR} install

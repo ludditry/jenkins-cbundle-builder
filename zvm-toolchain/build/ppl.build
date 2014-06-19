@@ -1,0 +1,5 @@
+# build ppl, the parma polyhedra library
+
+./configure CFLAGS="-m32 -I${DESTDIR}/include " CXXFLAGS="-m32 -I${DESTDIR/include} " CPPFLAGS="-fexceptions " --prefix="" --disable-shared --enable-interfaces="cxx c" --with-gmp-prefix=${DESTDIR} --disable-rpath
+
+make

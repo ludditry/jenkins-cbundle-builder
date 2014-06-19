@@ -1,0 +1,3 @@
+# install mpfr
+
+make DESTDIR=${DESTDIR} install

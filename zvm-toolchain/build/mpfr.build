@@ -1,0 +1,5 @@
+# build mpfr
+
+./configure CFLAGS="-m32 -I${DESTDIR}/include " CXXFLAGS="-m32 -I${DESTDIR/include} " CPPFLAGS="-fexceptions " --prefix="" --disable-shared --with-gmp=${DESTDIR}
+
+make
