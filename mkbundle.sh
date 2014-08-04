@@ -17,4 +17,4 @@ mkcbundle -p ${PACKAGE} -v ${VERSION}
 mkdir -p /var/www/cbundles/${PACKAGE}
 cp ${TARBALL} /var/www/cbundles/${PACKAGE}
 
-echo ${VERSION} > /var/www/cbundles/${PACKAGE}/snapshot.txt
+echo ${VERSION} > /var/www/cbundles/${PACKAGE}/snapshot-version
