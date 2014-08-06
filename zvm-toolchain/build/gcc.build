@@ -3,7 +3,7 @@
 mkdir -p build
 pushd build
 
-../configure CC="gcc -m32" CFLAGS="-O2 -g -Dinhibit_libc -D__gthr_posix_h" LDFLAGS="-s" CFLAGS_FOR_TARGET="-O2 -g " CXXFLAGS_FOR_TARGET="-O2 -g " --prefix="" --disable-decimal-float --disable-libgomp --disable-libmudflap --disable-libssp --disable-libstdxx-pch --target=x86_64-nacl --with-gmp=${DESTDIR} --with-mpfr=${DESTDIR} --with-ppl=${DESTDIR} --with-host-libstdcxx="-lpwl -Wl,-Bstatic -lstdc++ -Wl,-Bdynamic -lm" --with-cloog=${DESTDIR} --disable-ppl-version-check --disable-shared --disable-threads --enable-languages="c" --without-headers
+../configure CC="gcc -m32" CFLAGS="-O2 -g -Dinhibit_libc -D__gthr_posix_h" LDFLAGS="-s" CFLAGS_FOR_TARGET="-O2 -g " CXXFLAGS_FOR_TARGET="-O2 -g " --prefix="" --disable-decimal-float --disable-libgomp --disable-libmudflap --disable-libssp --disable-libstdxx-pch --target=x86_64-nacl --with-gmp=${DESTDIR} --with-mpfr=${DESTDIR} --with-ppl=${DESTDIR} --with-host-libstdcxx="-lpwl -Wl,-Bstatic -lstdc++ -Wl,-Bdynamic -lm" --with-cloog=${DESTDIR} --disable-ppl-version-check --disable-shared --disable-threads --enable-languages="c,c++" --without-headers
 
 make all-gcc
 make all-target-libgcc

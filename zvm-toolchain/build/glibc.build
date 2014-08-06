@@ -1,13 +1,19 @@
 # build glibc with nacl + zrt
 
 # awkward hack to build stub zrt...
-x86_64-nacl-gcc -m32 -march=i486 -DZLIBC_STUB -pipe -fno-strict-aliasing -mno-tls-direct-seg-refs -c -o ${DESTDIR}/lib/zrt.o ../zrt/lib/zrt.c
 
-mkdir -p build
-pushd build
+mkdir -p build/{32,64}
 
-../configure ZRT_ROOT=${DESTDIR} BUILD_CC="gcc -O2 -g" CC="${DESTDIR}/bin/x86_64-nacl-gcc -m32" CFLAGS="-pipe -fno-strict-aliasing -mno-tls-direct-seg-refs -march=i486 -O2 -g -I ${DESTDIR}/include" libc_cv_forced_unwind=yes libc_cv_c_cleanup=yes libc_cv_slibdir=/lib32 --prefix="" --libdir=/lib32 --host=i486-linux-gnu --with-headers="${DESTDIR}/include" --enable-kernel=2.6.18 --with-zrt=yes
+#rm -f ${DESTDIR}/lib/zrt.o
+#x86_64-nacl-gcc -m32 -march=i486 -DZLIBC_STUB -pipe -fno-strict-aliasing -mno-tls-direct-seg-refs -c -o ${DESTDIR}/lib/zrt.o ../zrt/lib/zrt.c
+# pushd build/32
+# ../../configure ZRT_ROOT=${DESTDIR} BUILD_CC="gcc -O2 -g" CC="${DESTDIR}/bin/x86_64-nacl-gcc -m32" CFLAGS="-pipe -fno-strict-aliasing -mno-tls-direct-seg-refs -march=i486 -O2 -g -I${DESTDIR}/include" libc_cv_forced_unwind=yes libc_cv_c_cleanup=yes libc_cv_slibdir=/lib32 --prefix="" --libdir=/lib32 --host=i486-linux-gnu --with-headers="${DESTDIR}/include" --enable-kernel=2.6.18 --with-zrt=yes
+# make ZRT_ROOT=${DESTDIR}
+# popd
 
-make
-
+rm -f ${DESTDIR}/lib/zrt.o
+x86_64-nacl-gcc -m64 -DZLIBC_STUB -pipe -fno-strict-aliasing -mno-tls-direct-seg-refs -c -o ${DESTDIR}/lib/zrt.o ../zrt/lib/zrt.c
+pushd build/64
+../../configure ZRT_ROOT=${DESTDIR} BUILD_CC="gcc -O2 -g" CC="${DESTDIR}/bin/x86_64-nacl-gcc -m64" CFLAGS="-pipe -fno-strict-aliasing -mno-tls-direct-seg-refs -O2 -g -I${DESTDIR}/include" libc_cv_forced_unwind=yes libc_cv_c_cleanup=yes libc_cv_slibdir=/lib --prefix="" --libdir=/lib --host=x86_64-linux-gnu --with-headers="${DESTDIR}/include" --enable-kernel=2.6.18 --with-zrt=yes
+make ZRT_ROOT=${DESTDIR}
 popd
